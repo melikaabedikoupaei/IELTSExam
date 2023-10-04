@@ -12,10 +12,10 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          python-version: 3.x # Specify the Python version
+          node-version: '16' # Specify Node.js version
 
       - name: Run Script
         run: python your_script.py # Replace with your script filename
