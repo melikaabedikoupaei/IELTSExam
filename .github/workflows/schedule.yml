@@ -1,1 +1,22 @@
+name: Schedule Script
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Run every 5 minutes
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x # Specify the Python version
+
+      - name: Run Script
+        run: python your_script.py # Replace with your script filename
 
