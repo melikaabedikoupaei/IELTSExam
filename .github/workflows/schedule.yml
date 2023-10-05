@@ -2,7 +2,7 @@ name: Schedule Python Script
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Run every 5 minutes
+    - cron: '*/50 * * * *' # Run every 5 minutes
 
 jobs:
   run:
@@ -28,7 +28,6 @@ jobs:
       - name: Install Additional Packages
         run: |
           pip install requests
-          pip install email.mime.multipart
           # Add more packages as needed
 
       - name: Run Python Script
