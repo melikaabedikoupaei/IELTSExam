@@ -1,7 +1,6 @@
 ###https://thecaferobot.com/learn/web-scraping-raspberry-pi-python-tutorial-guide/
 from bs4 import BeautifulSoup 
 import requests 
-import re 
 import smtplib 
 from email.mime.multipart import MIMEMultipart
 nothing_new=['بر اساس جستجوی شما هیچ آزمونی پیدا نشد. لطفا جستجوی انجام شده خود را اصلاح نمایید.\n']
