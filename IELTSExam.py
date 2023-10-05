@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup 
 import requests 
-import re 
 import smtplib 
 from email.mime.multipart import MIMEMultipart
 class IeltsExam:

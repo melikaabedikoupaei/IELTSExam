@@ -1,9 +1,8 @@
-name: Schedule Script
+name: Schedule Python Script
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *' # Run every 5 minutes
+    - cron: '*/50 * * * *' # Run every 5 minutes 0 0 * * *
 
 jobs:
   run:
@@ -13,10 +12,23 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify Node.js version
+
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: 3.x # Specify the Python version
+          python-version: '3.x' # Specify the Python version
 
-      - name: Run Script
-        run: python IELTSExam.ipynb # Replace with your script filename
+      - name: Install BeautifulSoup
+        run: pip install beautifulsoup4
+
+      - name: Install Additional Packages
+        run: |
+          pip install requests
+          # Add more packages as needed
+
+      - name: Run Python Script
+        run: python IELTSExam.py
