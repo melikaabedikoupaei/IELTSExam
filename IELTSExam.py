@@ -47,13 +47,13 @@ def main():
     exam_info = scraper.fetch_exam_info()
     nothing_new=['بر اساس جستجوی شما هیچ آزمونی پیدا نشد. لطفا جستجوی انجام شده خود را اصلاح نمایید.']
     if exam_info==nothing_new:
-        message_body = "No new exams found.baby.I love you "
+        message_body = "No new exams found.I love you "
     else:
         message_body = "check irsafam website baybe.kiss"
 
     sender_email = 'melikaabedi681375@gmail.com'
     sender_password = 'sckl gryk bpkx mfgj' 
-    receiver_email = 'melikaabedi681375@gmail.com'
+    receiver_email = 'ghazalrezaei2001@gmail.com'
 
     email_sender = EmailSender(sender_email, sender_password, receiver_email)
     email_sender.send_email("IeltsExam", message_body)
