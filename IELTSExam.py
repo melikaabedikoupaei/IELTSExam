@@ -9,7 +9,7 @@ class IeltsExam:
         self.message_body=""
         self.gmail_user = 'melikaabedi681375@gmail.com'  
         self.gmail_password = 'sckl gryk bpkx mfgj'
-        self.receiver_email_address='melikaabedi681375@gmail.com' 
+        self.receiver_email_address='ghazalrezaei2001@gmail.com' 
     def request_for_information(self):
         r = requests.get("https://irsafam.com/ielts/timetable?city%5B%5D=tehran&model%5B%5D=ielts&type%5B%5D=academic") 
         soup = BeautifulSoup(r.text, 'html.parser') 
