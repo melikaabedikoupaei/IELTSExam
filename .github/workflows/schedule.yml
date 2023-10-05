@@ -1,6 +1,7 @@
 name: Schedule Script
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/5 * * * *' # Run every 5 minutes
 
@@ -19,4 +20,3 @@ jobs:
 
       - name: Run Script
         run: python your_script.py # Replace with your script filename
-
