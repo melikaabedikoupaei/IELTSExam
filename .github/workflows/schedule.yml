@@ -2,7 +2,7 @@ name: Schedule Python Script
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Run every dat at 00:00
+    - cron: '*/5 * * * *' # Run every dat at 00:00 '0 0 * * *'
 
 jobs:
   run:
