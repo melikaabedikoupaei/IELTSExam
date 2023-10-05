@@ -28,7 +28,7 @@ jobs:
       - name: Install Additional Packages
         run: |
           pip install requests
-          pip install email
+          pip install email.mime.multipart
           # Add more packages as needed
 
       - name: Run Python Script
