@@ -28,7 +28,6 @@ jobs:
       - name: Install Additional Packages
         run: |
           pip install requests
-          pip install smtplib 
           pip install email
           # Add more packages as needed
 
