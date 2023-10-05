@@ -2,7 +2,7 @@ name: Schedule Python Script
 
 on:
   schedule:
-    - cron: '*/50 * * * *' # Run every 5 minutes
+    - cron: '*/2 * * * *' # Run every 5 minutes
 
 jobs:
   run:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.x' # Specify the Python version
+          python-version: '3.11' # Specify the Python version
 
       - name: Install BeautifulSoup
         run: pip install beautifulsoup4
@@ -28,6 +28,7 @@ jobs:
       - name: Install Additional Packages
         run: |
           pip install requests
+          pip install email
           # Add more packages as needed
 
       - name: Run Python Script
